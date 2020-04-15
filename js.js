@@ -1,4 +1,4 @@
-let gyroscope = new Gyroscope({frequency: 60});
+let gyroscope = new Gyroscope();
 
 alert(gyroscope.x)
 alert();
