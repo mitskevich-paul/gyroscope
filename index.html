@@ -19,13 +19,23 @@
     margin: 10px;
 }
     </style>
-    <input type="number">
-    <button></button>
+    <input class="counter" type="number">
+    <button class="button"></button>
     <script>
-        document.querySelector('button').addEventListener('touchstart', () => {
-            let i =+ 1;
-            document.querySelector('input').value = i;
-        })
+        const counter = document.querySelector(".counter");
+        const button = document.querySelector(".button");
+
+        button.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+
+        let interval = setInterval(() => {
+        counter.innerHTML = +counter.innerHTML + 1;
+        });
+
+        e.target.addEventListener("touchend", () => {
+        clearInterval(interval);
+        });
+        });
     </script>
 </body>
 </html>
