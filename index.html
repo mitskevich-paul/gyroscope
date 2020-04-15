@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        button {
+    border: 0;
+    border-radius: 10px;
+    width: 500px;
+    height: 50px;
+    background: rgba(2, 250, 15, 0.603);
+    font-size: 30px;
+    cursor: pointer;
+    margin: 10px;
+}
+    </style>
+    <input type="number">
     <button></button>
-    </canvas>
     <script>
-     let but = document.querySelector("button");
-      but.addEventListener('touchstart', () => {
-       let ugol += 1;     
-})
-      but.addEventListener('touchend', () => {
-       let ugol += 0;     
-})
-      but.style.transform = `rotate(${ugol}deg)`  
+        document.querySelector('button').addEventListener('touchstart', () => {
+            let i =+ 1;
+            document.querySelector('input').value = i;
+        })
     </script>
-  </body>
+</body>
 </html>
